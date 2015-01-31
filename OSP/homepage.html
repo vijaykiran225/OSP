@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Home </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style type="text/css">
+	.banner{position:static;top:0%;width:100%;border:solid;border-color:#3300ff;
+background-color:black;
+	color:white;border-radius:14pt 15pt 1em 1em;}
+	.list{list-style:square}
+	input {border:none;height:18pt;background-color:#988f94;border-radius:2pt;}
+input:focus {background-color:#f3f3f3;}
+	.leftmove{position:relative;top:20%;right:10pt;bottom:4pt;text-align:right;}
+	.image{position:relative;left:0px;}
+	.buttonGMI{background-color:#0033ff;color:white;border-radius:5pt;font-size:1em; padding-bottom: 15px;}
+	.buttonGMI:hover{background-color:red;color:white;box-shadow:0px 10px 2px green;}
+	
+	td{border:none;border-color:blue;border-width:10px;clear:left;}
+	td:hover{border-bottom:solid black ;border-radius:20px;}
+	.transit{bottom:0%;
+width:100px;
+height:100px;
+text-align:center;
+
+transition-property:width , height;
+transition-duration:1s;
+transition-timing-function:linear;
+transition-delay:0s;
+
+-moz-transition-property:all;
+-moz-transition-duration:1s;
+-moz-transition-timing-function:ease;
+-moz-transition-delay:0s;
+}
+.outputcc{background-color:#ccccff;
+height:700px;
+background-image:url('401122_267420499992762_176302292437917_626075_86624478_n.jpg');
+background-position:right;
+background-attachment:scroll;
+background-repeat:no-repeat;
+position:static;
+
+top:70%;}
+.transit:hover
+{
+margin-right:200px;
+/*opacity:0.3;*/
+color:red;
+width:200px; 
+font-size:20pt;
+}
+	.movedown{background: -moz-linear-gradient(green, #ccccff);	position:relative;top:29%;border:solid;border-color:#3300ff;border-radius:15px;}
+	
+  </style>
+
+  <script type="text/javascript">
+  function call()
+  {
+
+  document.getElementById("output").innerHTML=" u r at home";
+window.open("ImageMove.php");
+  }
+  function checkItems(){
+  document.getElementById("output").innerHTML="Checking Items";
+document.getElementById("output").setAttribute("style","bgcolor:blue");
+  }
+function	buy(){
+document.getElementById("output").innerHTML="Buy";
+}
+function sell(){
+document.getElementById("output").innerHTML="Sell";
+}
+
+function us(){
+document.getElementById("output").innerHTML="Designed by <font size=7><br>&copy;Kalyan Singh <br> &copy;Siva Sai Reddy <br> &copy;Kartheek <br> &copy;Vijay Kiran</font>";
+}
+function comment(){
+//document.getElementById("output").innerHTML="comment :: ";
+window.open("comment1.php");
+}
+function gone()
+{
+document.getElementById("output").innerHTML="";
+}
+  </script>
+  <script>
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+ </head>
+
+ <body onload="startTime()">
+ <form method="post" action="login.php">
+  <div id="" class="banner">
+  <div id="txt" style="float:left;font-size:1.5em;font-family: Arial;">
+	
+  </div>
+	<center style="font-size:3em">Welcome To Our VIT Auction System</center>
+		<marquee direction="right" behavior="alternate"  >Internet And Web Programming Project </marquee>
+
+	<div id="" class="leftmove">
+		Name:&nbsp&nbsp<input type="text" name="username"><br><br>
+	Password:&nbsp&nbsp<input type="password" name="password"><br><br>
+	
+<input type="submit" class="buttonGMI" value="Submit" name="submit" /><br>
+<a href="registration.html">click here to register</a>
+
+	</div>
+	
+	
+  </div>
+  </form>
+  <div id="" class="movedown">
+<table  align="center" cellspacing="20px"><tr>
+	<td  class="transit" onclick ="call()" onblur="gone()"> Home</td>
+	<td  class="transit" onblur="gone()" onclick="checkItems()" >Check items</td>
+	<td class="transit" onblur="gone()" onclick="buy()" >Buy</td>
+	<td class="transit" onblur="gone()" onclick="sell()" >Sell</td>
+		<td class="transit" onblur="gone()" onclick="comment()" >Comment</td>
+				<td class="transit" onblur="gone()" onclick="us()" >About Us</td></tr>
+</table></div>
+
+  <div id="output" class="outputcc" style="">
+	
+	<img src="donate_blood1.jpg" width="460" height="442" border="0" alt="" style="position:static;left:0px;top:10px;">
+	<img src="donate_blood1.jpg" width="460" height="442" border="0" alt="" style="float:right;">
+	
+	<img src="donate_blood1.jpg" width="460" height="442" border="0" alt="" style="position:static;left:0px;top:10px;">
+	<img src="donate_blood1.jpg" width="460" height="442" border="0" alt="" style="float:right;">
+  </div>
+  <div id="" class="">
+
+  </div>
+ </body>
+</html>

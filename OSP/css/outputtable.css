@@ -1,0 +1,9 @@
+td
+{
+border:solid thin;
+border-radius:4px;
+border-left-color:blue;
+border-right-color:red;
+border-top-color:green;
+border-bottom-color:black;
+}
